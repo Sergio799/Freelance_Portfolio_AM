@@ -74,7 +74,7 @@ export function Pipeline() {
                 className="relative bg-card border border-border p-6 rounded-2xl group hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,255,100,0.05)]"
               >
                 {/* Node on the pipeline */}
-                <div className="absolute -top-3 left-6 px-3 py-1 bg-primary text-primary-foreground text-[10px] font-bold font-mono uppercase tracking-widest rounded-full">
+                <div className="absolute -top-3 left-6 px-3 py-1 bg-secondary border border-border text-foreground text-[10px] font-bold font-mono uppercase tracking-widest rounded-full">
                   {item.phase}
                 </div>
 

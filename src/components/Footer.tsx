@@ -83,7 +83,7 @@ export function Footer() {
                 className="w-full bg-secondary/50 border border-border rounded-lg p-3 font-mono text-sm focus:border-primary focus:outline-none transition-colors resize-none"
               />
             </div>
-            <button className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold font-mono text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group">
+            <button className="w-full py-4 bg-secondary border border-border text-foreground rounded-xl font-bold font-mono text-sm hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 group">
               POST /CONTACT/SEND
               <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
