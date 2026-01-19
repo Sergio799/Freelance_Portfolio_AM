@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 
 export function Hero() {
   const [text, setText] = useState("");
+  const [mounted, setMounted] = useState(false);
   const fullText = "SELECT * FROM career_journey WHERE impact = 'MAXIMUM';";
   
   useEffect(() => {
+    setMounted(true);
     let i = 0;
     const interval = setInterval(() => {
       setText(fullText.slice(0, i));
@@ -22,7 +24,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
       {/* Background Data Flow Particles */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {mounted && [...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute h-px bg-primary"

@@ -1,7 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Pipeline } from "@/components/Pipeline";
 import { TechStack } from "@/components/TechStack";
-import { Projects } from "@/components/Projects";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Hero />
       <Pipeline />
       <TechStack />
-      <Projects />
       <Footer />
     </main>
   );
