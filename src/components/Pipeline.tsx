@@ -5,24 +5,14 @@ import { ArrowRight, Database, Code, Cloud, MapPin, Calendar } from "lucide-reac
 
 const milestones = [
   {
-    phase: "Source: HCL",
-    title: "Data Engineer",
-    company: "HCL",
-    location: "Charlotte, NC",
-    period: "Oct 2025 – Present",
-    description: "Engineering real-time and batch data pipelines across AWS, Azure, and GCP, processing 2B+ records daily.",
-    icon: Cloud,
-    tools: ["AWS Glue", "Azure Data Factory", "BigQuery", "Terraform"]
-  },
-  {
-    phase: "Process: Ocean Spray",
-    title: "Data Engineer",
-    company: "Ocean Spray Inc",
-    location: "Charlotte, NC",
-    period: "Nov 2024 – Sep 2025",
-    description: "Led GCP modernization, migrating 200+ Hive tables to BigQuery. Automated workflows saving 25 hrs/week.",
+    phase: "Ingest: HCLTech",
+    title: "Data Analyst",
+    company: "HCLTech",
+    location: "Hyderabad, India",
+    period: "Aug 2020 – Jul 2022",
+    description: "Optimized SQL queries and SSIS transformations. Unified Azure SQL and Snowflake for 50% better performance.",
     icon: Database,
-    tools: ["Airflow", "BigQuery", "Python", "Tidal"]
+    tools: ["SQL", "SSIS", "Snowflake", "Power BI"]
   },
   {
     phase: "Transform: SLU",
@@ -35,14 +25,24 @@ const milestones = [
     tools: ["Azure Synapse", "HDInsight", "PostgreSQL", "Power BI"]
   },
   {
-    phase: "Ingest: HCL India",
-    title: "Data Analyst",
-    company: "HCL",
-    location: "Hyderabad, India",
-    period: "Aug 2020 – Jul 2022",
-    description: "Optimized SQL queries and SSIS transformations. Unified Azure SQL and Snowflake for 50% better performance.",
+    phase: "Process: Ocean Spray",
+    title: "Data Engineer",
+    company: "Ocean Spray Inc",
+    location: "Charlotte, NC",
+    period: "Nov 2024 – Sep 2025",
+    description: "Led GCP modernization, migrating 200+ Hive tables to BigQuery. Automated workflows saving 25 hrs/week.",
     icon: Database,
-    tools: ["SQL", "SSIS", "Snowflake", "Power BI"]
+    tools: ["Airflow", "BigQuery", "Python", "Tidal"]
+  },
+  {
+    phase: "Delivery: HCLTech",
+    title: "Data Engineer",
+    company: "HCLTech",
+    location: "Charlotte, NC",
+    period: "Oct 2025 – Present",
+    description: "Engineering real-time and batch data pipelines across AWS, Azure, and GCP, processing 2B+ records daily.",
+    icon: Cloud,
+    tools: ["AWS Glue", "Azure Data Factory", "BigQuery", "Terraform"]
   }
 ];
 

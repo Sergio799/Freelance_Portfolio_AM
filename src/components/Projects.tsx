@@ -40,11 +40,11 @@ export function Projects() {
             >
               <div className="grid md:grid-cols-5 h-full">
                 <div className="md:col-span-2 overflow-hidden relative">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 grayscale group-hover:grayscale-0"
-                  />
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
                   <div className="absolute inset-0 bg-gradient-to-r from-card/0 via-transparent to-card hidden md:block" />
                   <div className="absolute top-4 left-4">
                     <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase backdrop-blur-sm">
