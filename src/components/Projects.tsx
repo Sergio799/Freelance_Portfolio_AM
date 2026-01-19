@@ -17,16 +17,16 @@ const publications = [
 
 export function Projects() {
   return (
-    <section id="publications" className="py-24 px-4 bg-secondary/5">
+    <section id="publications" className="py-12 md:py-24 px-4 bg-secondary/5">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-4 font-mono tracking-tighter text-primary data-glow">
-            RESEARCH_RESOURCES
-          </h2>
-          <p className="text-muted-foreground font-mono max-w-xl">
-            Academic contributions and technical publications in the field of IoT and smart systems.
-          </p>
-        </div>
+          <div className="mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 font-mono tracking-tighter text-primary data-glow">
+              RESEARCH_RESOURCES
+            </h2>
+            <p className="text-muted-foreground font-mono max-w-xl text-sm md:text-base">
+              Academic contributions and technical publications in the field of IoT and smart systems.
+            </p>
+          </div>
 
         <div className="grid grid-cols-1 gap-8">
           {publications.map((project, i) => (
@@ -38,56 +38,56 @@ export function Projects() {
               viewport={{ once: true }}
               className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 max-w-4xl mx-auto"
             >
-              <div className="p-8">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase">
-                      {project.type}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 mb-4 text-xs font-mono text-primary">
-                    <BookOpen size={14} />
-                    {project.conference}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-mono">
-                    {project.description}
-                  </p>
+              <div className="p-4 md:p-8">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase">
+                        {project.type}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4 text-[10px] md:text-xs font-mono text-primary">
+                      <BookOpen size={14} className="flex-shrink-0" />
+                      <span className="break-words">{project.conference}</span>
+                    </div>
+                    
+                    <h3 className="text-lg md:text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-6 font-mono">
+                      {project.description}
+                    </p>
 
-                  <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-secondary/30 mb-6 border border-border/50">
-                    {Object.entries(project.metrics).map(([key, value], mi) => (
-                      <div key={mi} className="text-center">
-                        <div className="text-[10px] text-muted-foreground font-mono uppercase mb-1">{key}</div>
-                        <div className="text-sm font-bold text-primary">{value}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, ti) => (
-                        <span key={ti} className="text-[10px] font-mono opacity-50 flex items-center gap-1">
-                          <GitBranch size={10} /> {tag}
-                        </span>
+                    <div className="grid grid-cols-3 gap-2 md:gap-4 p-3 md:p-4 rounded-xl bg-secondary/30 mb-6 border border-border/50">
+                      {Object.entries(project.metrics).map(([key, value], mi) => (
+                        <div key={mi} className="text-center">
+                          <div className="text-[8px] md:text-[10px] text-muted-foreground font-mono uppercase mb-1">{key}</div>
+                          <div className="text-xs md:text-sm font-bold text-primary">{value}</div>
+                        </div>
                       ))}
                     </div>
-                    <a
-                      href="#"
-                      className="p-2 rounded-full bg-background/80 border border-border hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, ti) => (
+                          <span key={ti} className="text-[9px] md:text-[10px] font-mono opacity-50 flex items-center gap-1">
+                            <GitBranch size={10} /> {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <a
+                        href="#"
+                        className="p-2 rounded-full bg-background/80 border border-border hover:text-primary transition-colors self-end sm:self-auto"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                      </div>
                     </div>
-                  </div>
-              </motion.div>
+                </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-full text-[10px] font-mono text-muted-foreground">
+        <div className="mt-8 md:mt-16 text-center">
+          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-card border border-border rounded-full text-[10px] font-mono text-muted-foreground">
             <Database size={12} className="text-primary" />
             END_OF_COLLECTION
           </div>
