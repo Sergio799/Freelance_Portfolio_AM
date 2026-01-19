@@ -38,22 +38,12 @@ export function Projects() {
               viewport={{ once: true }}
               className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 max-w-4xl mx-auto"
             >
-              <div className="grid md:grid-cols-5 h-full">
-                <div className="md:col-span-2 overflow-hidden relative">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  <div className="absolute inset-0 bg-gradient-to-r from-card/0 via-transparent to-card hidden md:block" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase backdrop-blur-sm">
+              <div className="p-8">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase">
                       {project.type}
                     </span>
                   </div>
-                </div>
-
-                <div className="md:col-span-3 p-8">
                   <div className="flex items-center gap-2 mb-4 text-xs font-mono text-primary">
                     <BookOpen size={14} />
                     {project.conference}
@@ -90,10 +80,9 @@ export function Projects() {
                     >
                       <ExternalLink size={16} />
                     </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
           ))}
         </div>
 
