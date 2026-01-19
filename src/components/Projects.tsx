@@ -8,8 +8,8 @@ const publications = [
     title: "iLock: State-of-the-art Sophisticated Door Lock for Wireless Devices",
     type: "Research Publication",
     conference: "IEEE International Conference on Innovative Mechanisms for Industry Applications (ICIMIA 2020)",
-    description: "Designed a smart lock system with guest mode features using Arduino Uno, Wi-Fi, Bluetooth, and Fingerprint sensors. Focused on security and cost-effectiveness for smart homes.",
-    tags: ["IoT", "Arduino", "Security", "Wireless"],
+    description: "This research presents a comprehensive smart door lock solution designed for modern wireless environments. The system integrates multiple authentication methods including fingerprint biometrics, Bluetooth proximity detection, and Wi-Fi connectivity for remote access control. Built on Arduino Uno microcontroller, the iLock features a unique guest mode that allows temporary access codes to be generated and shared with visitors, eliminating the need for physical keys. The architecture prioritizes both security through multi-factor authentication and cost-effectiveness, making smart home technology accessible to a broader audience. The paper demonstrates real-world implementation with latency optimization techniques and discusses future enhancements for integration with voice assistants and home automation systems.",
+    tags: ["IoT", "Arduino", "Security", "Wireless", "Biometrics", "Smart Home"],
     metrics: { sensors: "4+", latency: "Low", status: "Published" },
     image: "https://images.unsplash.com/photo-1558002038-103792e1773a?auto=format&fit=crop&q=80&w=800"
   }
