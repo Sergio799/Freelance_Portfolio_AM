@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Database, GitBranch, Share2, BookOpen } from "lucide-react";
+import { ExternalLink, Database, GitBranch, BookOpen } from "lucide-react";
 
 const publications = [
   {
