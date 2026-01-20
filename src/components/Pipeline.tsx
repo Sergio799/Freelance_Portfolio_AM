@@ -65,40 +65,40 @@ export function Pipeline() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {milestones.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.15 }}
-                  viewport={{ once: true }}
-                  className="relative bg-card border border-border p-6 rounded-2xl group hover:border-primary/50 transition-all"
-                >
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.15 }}
+                    viewport={{ once: true }}
+                    className="relative bg-card border border-border p-8 rounded-2xl group hover:border-primary/50 transition-all min-h-[320px]"
+                  >
                 {/* Node on the pipeline */}
                 <div className="absolute -top-3 left-6 px-3 py-1 bg-secondary border border-border text-foreground text-[10px] font-bold font-mono uppercase tracking-widest rounded-full">
                   {item.phase}
                 </div>
 
-                <div className="mb-6 mt-2">
-                  <div className="flex items-center justify-between mb-4">
-                    <item.icon className="text-primary" size={24} />
-                    <span className="text-[10px] font-mono text-muted-foreground flex items-center gap-1">
-                      <Calendar size={10} />
-                      {item.period}
-                    </span>
+                  <div className="mb-8 mt-4">
+                    <div className="flex items-center justify-between mb-6">
+                      <item.icon className="text-primary" size={28} />
+                      <span className="text-xs font-mono text-muted-foreground flex items-center gap-1.5">
+                        <Calendar size={12} />
+                        {item.period}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono mb-5">
+                      <MapPin size={12} />
+                      {item.location}
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono mb-4">
-                    <MapPin size={10} />
-                    {item.location}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {item.description}
-                  </p>
-                </div>
 
-                <div className="flex flex-wrap gap-1.5 mt-auto">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {item.tools.map((tool, ti) => (
-                    <span key={ti} className="px-2 py-0.5 bg-secondary text-[9px] font-mono rounded border border-border text-foreground/80">
+                    <span key={ti} className="px-2.5 py-1 bg-secondary text-[10px] font-mono rounded border border-border text-foreground/80">
                       {tool}
                     </span>
                   ))}
