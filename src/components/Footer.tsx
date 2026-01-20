@@ -26,11 +26,23 @@ export function Footer() {
                 <GraduationCap className="text-primary" size={24} />
                 <h3 className="font-bold font-mono text-sm uppercase tracking-widest">Education_History</h3>
               </div>
-              <p className="font-bold text-lg mb-1">University of North Texas</p>
-              <p className="text-primary text-sm font-mono mb-2">Master&apos;s in Information Systems & Technology</p>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
-                <Calendar size={12} />
-                <span>Aug 2022 – Dec 2023</span>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-bold text-lg mb-1">University of North Texas</p>
+                  <p className="text-primary text-sm font-mono mb-2">Master&apos;s in Information Systems & Technology</p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                    <Calendar size={12} />
+                    <span>Aug 2022 – Dec 2023</span>
+                  </div>
+                </div>
+                <div className="pt-4 border-t border-border/50">
+                  <p className="font-bold text-lg mb-1">VR Siddhartha Engineering College</p>
+                  <p className="text-primary text-sm font-mono mb-2">Bachelor&apos;s in Computer Science & Engineering</p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                    <Calendar size={12} />
+                    <span>2016 – 2020</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
