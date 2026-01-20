@@ -5,24 +5,14 @@ import { ArrowRight, Database, Code, Cloud, MapPin, Calendar } from "lucide-reac
 
 const milestones = [
   {
-    phase: "Ingest: HCLTech",
-    title: "Data Analyst",
+    phase: "Delivery: HCLTech",
+    title: "Data Engineer",
     company: "HCLTech",
-    location: "Hyderabad, India",
-    period: "Aug 2020 – Jul 2022",
-    description: "Optimized SQL queries and SSIS transformations. Unified Azure SQL and Snowflake for 50% better performance.",
-    icon: Database,
-    tools: ["SQL", "SSIS", "Snowflake", "Power BI"]
-  },
-  {
-    phase: "Transform: SLU",
-    title: "Data Analyst",
-    company: "Saint Louis University",
-    location: "St Louis, MO",
-    period: "Jan 2024 – Oct 2024",
-    description: "Delivered Azure-based pipelines for academic records. Administered PostgreSQL and enforced FERPA governance.",
-    icon: Code,
-    tools: ["Azure Synapse", "HDInsight", "PostgreSQL", "Power BI"]
+    location: "Charlotte, NC",
+    period: "Oct 2025 – Present",
+    description: "Engineering real-time and batch data pipelines across AWS, Azure, and GCP, processing 2B+ records daily.",
+    icon: Cloud,
+    tools: ["AWS Glue", "Azure Data Factory", "BigQuery", "Terraform"]
   },
   {
     phase: "Process: Ocean Spray",
@@ -35,14 +25,24 @@ const milestones = [
     tools: ["Airflow", "BigQuery", "Python", "Tidal"]
   },
   {
-    phase: "Delivery: HCLTech",
-    title: "Data Engineer",
+    phase: "Transform: SLU",
+    title: "Data Analyst",
+    company: "Saint Louis University",
+    location: "St Louis, MO",
+    period: "Jan 2024 – Oct 2024",
+    description: "Delivered Azure-based pipelines for academic records. Administered PostgreSQL and enforced FERPA governance.",
+    icon: Code,
+    tools: ["Azure Synapse", "HDInsight", "PostgreSQL", "Power BI"]
+  },
+  {
+    phase: "Ingest: HCLTech",
+    title: "Data Analyst",
     company: "HCLTech",
-    location: "Charlotte, NC",
-    period: "Oct 2025 – Present",
-    description: "Engineering real-time and batch data pipelines across AWS, Azure, and GCP, processing 2B+ records daily.",
-    icon: Cloud,
-    tools: ["AWS Glue", "Azure Data Factory", "BigQuery", "Terraform"]
+    location: "Hyderabad, India",
+    period: "Aug 2020 – Jul 2022",
+    description: "Optimized SQL queries and SSIS transformations. Unified Azure SQL and Snowflake for 50% better performance.",
+    icon: Database,
+    tools: ["SQL", "SSIS", "Snowflake", "Power BI"]
   }
 ];
 

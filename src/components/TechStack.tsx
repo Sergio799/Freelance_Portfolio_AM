@@ -34,7 +34,7 @@ const skillCategories = [
   },
   { 
     category: "Systems & Tools", 
-    items: ["Linux", "GitHub", "JIRA", "Great Expectations"], 
+    items: ["Linux", "GitHub", "JIRA", "Docker"], 
     icon: Terminal, 
     color: "text-purple-500", 
     border: "border-purple-500/20" 
