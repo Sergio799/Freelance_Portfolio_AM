@@ -1,9 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, ChevronRight, Phone, GraduationCap, Calendar } from "lucide-react";
+import { Mail, Linkedin, Github, ChevronRight, Phone, GraduationCap, Calendar, Loader2, CheckCircle } from "lucide-react";
 
 export function Footer() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Failed to send message");
+    }
+  };
+
   return (
     <footer id="contact" className="py-24 px-4 border-t border-border bg-background relative overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -56,13 +91,16 @@ export function Footer() {
             CONNECTION: SECURE_SSL_V3
           </div>
           
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-[10px] font-mono uppercase text-muted-foreground mb-2">Source_Name</label>
                 <input 
                   type="text" 
                   placeholder="INPUT.NAME"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                   className="w-full bg-secondary/50 border border-border rounded-lg p-3 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
                 />
               </div>
@@ -71,6 +109,9 @@ export function Footer() {
                 <input 
                   type="email" 
                   placeholder="INPUT.EMAIL"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="w-full bg-secondary/50 border border-border rounded-lg p-3 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
                 />
               </div>
@@ -80,12 +121,36 @@ export function Footer() {
               <textarea 
                 placeholder="INPUT.MESSAGE"
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
                 className="w-full bg-secondary/50 border border-border rounded-lg p-3 font-mono text-sm focus:border-primary focus:outline-none transition-colors resize-none"
               />
             </div>
-            <button className="w-full py-4 bg-secondary border border-border text-foreground rounded-xl font-bold font-mono text-sm hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 group">
-              POST /CONTACT/SEND
-              <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            {status === "error" && (
+              <p className="text-red-500 text-xs font-mono">{errorMessage}</p>
+            )}
+            {status === "success" && (
+              <p className="text-green-500 text-xs font-mono flex items-center gap-2">
+                <CheckCircle size={14} /> Message sent successfully!
+              </p>
+            )}
+            <button 
+              type="submit"
+              disabled={status === "loading"}
+              className="w-full py-4 bg-secondary border border-border text-foreground rounded-xl font-bold font-mono text-sm hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {status === "loading" ? (
+                <>
+                  <Loader2 size={16} className="animate-spin" />
+                  TRANSMITTING...
+                </>
+              ) : (
+                <>
+                  POST /CONTACT/SEND
+                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
           </form>
         </div>
