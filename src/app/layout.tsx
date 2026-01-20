@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
 
 export const metadata: Metadata = {
   title: "Bhaskar Bavineni | Data Engineer & Analyst",
@@ -16,7 +15,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="antialiased selection:bg-primary selection:text-primary-foreground">
         {children}
-        <VisualEditsMessenger />
       </body>
     </html>
   );
