@@ -51,7 +51,7 @@ export function Pipeline() {
     <section id="experience" className="py-24 px-4 bg-secondary/10 relative">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-4 font-mono tracking-tighter text-primary data-glow">
+          <h2 className="text-3xl font-bold mb-4 font-mono tracking-tighter text-primary">
             THE CAREER_PIPELINE
           </h2>
           <p className="text-muted-foreground font-mono max-w-xl">
@@ -65,14 +65,14 @@ export function Pipeline() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {milestones.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.15 }}
-                viewport={{ once: true }}
-                className="relative bg-card border border-border p-6 rounded-2xl group hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,255,100,0.05)]"
-              >
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.15 }}
+                  viewport={{ once: true }}
+                  className="relative bg-card border border-border p-6 rounded-2xl group hover:border-primary/50 transition-all"
+                >
                 {/* Node on the pipeline */}
                 <div className="absolute -top-3 left-6 px-3 py-1 bg-secondary border border-border text-foreground text-[10px] font-bold font-mono uppercase tracking-widest rounded-full">
                   {item.phase}
@@ -117,7 +117,7 @@ export function Pipeline() {
 
         {/* Real-time stats simulation */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 border border-primary/20 bg-primary/5 rounded-xl">
+            <div className="p-6 border border-border bg-secondary/30 rounded-xl">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <h4 className="font-mono text-xs font-bold uppercase tracking-widest">Processing_Efficiency</h4>

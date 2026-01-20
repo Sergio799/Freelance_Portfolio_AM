@@ -54,7 +54,7 @@ export function TechStack() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <h2 className="text-3xl font-bold mb-4 font-mono tracking-tighter text-primary data-glow">
+            <h2 className="text-3xl font-bold mb-4 font-mono tracking-tighter text-primary">
               TECH_ECOSYSTEM
             </h2>
             <p className="text-muted-foreground font-mono max-w-xl">

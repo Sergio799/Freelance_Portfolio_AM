@@ -51,13 +51,13 @@ export function Hero() {
         transition={{ duration: 0.8 }}
         className="z-10 text-center max-w-4xl"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-mono mb-6">
-          <Activity size={14} className="animate-pulse" />
-          SYSTEM_STATUS: OPERATIONAL
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-secondary/30 text-muted-foreground text-xs font-mono mb-6">
+          <Activity size={14} className="text-primary animate-pulse" />
+          SYSTEM_STATUS: <span className="text-primary">OPERATIONAL</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
-          Bhaskar <span className="text-primary data-glow">Bavineni</span>
+          Bhaskar <span className="text-primary">Bavineni</span>
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-12 font-mono max-w-2xl mx-auto">

@@ -8,9 +8,9 @@ export function Footer() {
     <footer id="contact" className="py-24 px-4 border-t border-border bg-background relative overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div>
-          <h2 className="text-4xl font-bold mb-6 tracking-tighter">
-            READY TO <span className="text-primary data-glow">INITIATE</span> THE NEXT PIPELINE?
-          </h2>
+            <h2 className="text-4xl font-bold mb-6 tracking-tighter">
+              READY TO <span className="text-primary">INITIATE</span> THE NEXT PIPELINE?
+            </h2>
           <p className="text-muted-foreground font-mono mb-8 max-w-md">
             Currently accepting new challenges in Data Engineering, Analytics, and Cloud Architecture roles.
           </p>
@@ -101,8 +101,8 @@ export function Footer() {
       </div>
 
       {/* Decorative background grid elements */}
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 blur-[120px] rounded-full" />
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 blur-[120px] rounded-full" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full" />
     </footer>
   );
 }

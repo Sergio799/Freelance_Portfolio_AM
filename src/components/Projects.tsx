@@ -20,7 +20,7 @@ export function Projects() {
     <section id="publications" className="py-12 md:py-24 px-4 bg-secondary/5">
       <div className="max-w-6xl mx-auto">
           <div className="mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 font-mono tracking-tighter text-primary data-glow">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 font-mono tracking-tighter text-primary">
               RESEARCH_RESOURCES
             </h2>
             <p className="text-muted-foreground font-mono max-w-xl text-sm md:text-base">
@@ -39,11 +39,11 @@ export function Projects() {
               className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 max-w-4xl mx-auto"
             >
               <div className="p-4 md:p-8">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold uppercase">
-                        {project.type}
-                      </span>
-                    </div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="px-2 py-0.5 rounded bg-secondary border border-border text-primary text-[10px] font-mono font-bold uppercase">
+                          {project.type}
+                        </span>
+                      </div>
                     <div className="flex items-center gap-2 mb-4 text-[10px] md:text-xs font-mono text-primary">
                       <BookOpen size={14} className="flex-shrink-0" />
                       <span className="break-words">{project.conference}</span>
