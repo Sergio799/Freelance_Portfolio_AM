@@ -32,12 +32,12 @@ export function Footer() {
           </div>
 
           <div className="flex gap-4">
-            {[
-              { icon: Github, href: "https://github.com/bhaskar" },
-              { icon: Linkedin, href: "https://linkedin.com/in/bhaskar" },
-              { icon: Phone, href: "tel:7042810931" },
-              { icon: Mail, href: "mailto:bavinenibhaskar@gmail.com" },
-            ].map((social, i) => (
+{[
+                { icon: Github, href: "https://github.com/BhaskarBavineni9" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/bhaskarbavineni9/" },
+                { icon: Phone, href: "tel:+17042810931" },
+                { icon: Mail, href: "mailto:bavinenibhaskar@gmail.com" },
+              ].map((social, i) => (
               <a
                 key={i}
                 href={social.href}

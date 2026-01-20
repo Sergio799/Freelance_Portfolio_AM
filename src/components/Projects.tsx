@@ -75,11 +75,13 @@ export function Projects() {
                         ))}
                       </div>
                       <a
-                        href="#"
-                        className="p-2 rounded-full bg-background/80 border border-border hover:text-primary transition-colors self-end sm:self-auto"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
+                          href="https://ieeexplore.ieee.org/document/9074972"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-background/80 border border-border hover:text-primary transition-colors self-end sm:self-auto"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
                       </div>
                     </div>
                 </motion.div>
